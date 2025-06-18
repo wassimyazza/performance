@@ -6,11 +6,13 @@
                 
                 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 		
-		<!-- Critical CSS loaded normally for immediate rendering -->
-		<link rel="stylesheet" href="https://api.devaito.com/front/css/bootstrap.css" />
+		<!-- Only the most critical CSS loaded immediately -->
 		<link rel="stylesheet" href="https://api.devaito.com/front/css/style.css" />
 		
-		<!-- Non-critical CSS deferred using media trick -->
+		<!-- All other CSS deferred for mobile performance -->
+		<link rel="stylesheet" href="https://api.devaito.com/front/css/bootstrap.css" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/bootstrap.css" /></noscript>
+		
 		<link rel="stylesheet" href="https://api.devaito.com/front/css/icons.css" media="print" onload="this.media='all'" />
 		<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/icons.css" /></noscript>
 		
@@ -35,6 +37,11 @@
 		<!-- Font Awesome deferred -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'">
 		<noscript><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></noscript>
+		
+		<!-- Resource hints for faster loading -->
+		<link rel="dns-prefetch" href="//api.devaito.com">
+		<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+		<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
             </head>
             <body class=" "> 	
 
@@ -1260,26 +1267,51 @@ Our AI doesn't just build websites - it creates compelling content that speaks t
 		<footer></footer>
 		<div class="modal-container"></div>
 		
-		<!-- All scripts moved to very bottom and optimized with async/defer -->
-		<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js" async></script>
-		<script src="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/fonts.js?v=1750241018" async></script>
-		<script src="/public/builder/assets/builder/js/jquery-2.1.4.min.js" defer></script>
-		<script src="/public/builder/assets/builder/js/bootstrap.min.js" defer></script>
-		<script src="/public/builder/assets/builder/js/jquery.vide.min.js" defer></script>
-		<script src="/public/builder/assets/builder/js/jquery.magnific-popup.min.js" defer></script>
-		<script src="/public/builder/assets/builder/js/jquery.validate.min.js" defer></script>
-		<script src="/public/builder/assets/builder/js/jquery.smooth-scroll.min.js" defer></script>
-		<script src="/public/builder/assets/builder/js/skrollr.js" defer></script>
-		<script src="/public/builder/assets/builder/js/jquery.custom-file-input.js" defer></script>
-		<script src="/public/builder/assets/builder/js/jquery.waypoints.min.js" defer></script>
-		<script src="/public/builder/assets/builder/js/countUp-jquery.js" defer></script>
-		<script src="/public/builder/assets/builder/js/jquery.countdown.js" defer></script>
-		<script src="/public/builder/assets/builder/js/aos.js" defer></script>
-		<script src="https://api.devaito.com/utils/js-section-product.js" defer></script>
-		<script src="https://api.devaito.com/utils/section-js/translate-frontend.js" defer></script>
-		<script src="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/custom.js?v=1750241018" defer></script>
-		<script src="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/index.js?v=1750241018" defer></script>
-		<script src="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/header.js?v=1750241018" defer></script>
-		<script src="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/footer.js?v=1750241018" defer></script>
+		<!-- Optimized scripts for maximum mobile performance -->
+		<script>
+		// Inline critical font loading for mobile
+		if('fonts' in document){
+			document.fonts.ready.then(function(){
+				document.documentElement.classList.add('fonts-loaded');
+			});
+		}
+		</script>
+		
+		<!-- Non-critical scripts loaded after page load -->
+		<script>
+		window.addEventListener('load', function() {
+			var scripts = [
+				'https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js',
+				'/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/fonts.js?v=1750241018',
+				'/public/builder/assets/builder/js/jquery-2.1.4.min.js',
+				'/public/builder/assets/builder/js/bootstrap.min.js',
+				'/public/builder/assets/builder/js/jquery.vide.min.js',
+				'/public/builder/assets/builder/js/jquery.magnific-popup.min.js',
+				'/public/builder/assets/builder/js/jquery.validate.min.js',
+				'/public/builder/assets/builder/js/jquery.smooth-scroll.min.js',
+				'/public/builder/assets/builder/js/skrollr.js',
+				'/public/builder/assets/builder/js/jquery.custom-file-input.js',
+				'/public/builder/assets/builder/js/jquery.waypoints.min.js',
+				'/public/builder/assets/builder/js/countUp-jquery.js',
+				'/public/builder/assets/builder/js/jquery.countdown.js',
+				'/public/builder/assets/builder/js/aos.js',
+				'https://api.devaito.com/utils/js-section-product.js',
+				'https://api.devaito.com/utils/section-js/translate-frontend.js',
+				'/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/custom.js?v=1750241018',
+				'/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/index.js?v=1750241018',
+				'/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/header.js?v=1750241018',
+				'/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/footer.js?v=1750241018'
+			];
+			
+			scripts.forEach(function(src, index) {
+				setTimeout(function() {
+					var script = document.createElement('script');
+					script.src = src;
+					script.async = true;
+					document.head.appendChild(script);
+				}, index * 50);
+			});
+		});
+		</script>
 	</body>
 </html>
