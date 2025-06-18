@@ -5,18 +5,37 @@
                 <title>Your One-Stop Shop for the Best Deals!</title>
                 
                 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<!-- Critical CSS loaded normally -->
 		<link rel="stylesheet" href="https://api.devaito.com/front/css/bootstrap.css" />
-		<link rel="stylesheet" href="https://api.devaito.com/front/css/icons.css" />
 		<link rel="stylesheet" href="https://api.devaito.com/front/css/style.css" />
-		<link rel="stylesheet" href="https://api.devaito.com/front/css/magnific-popup.css" />
-		<link rel="stylesheet" href="https://api.devaito.com/front/css/aos.css" />
-                <link rel="preload" as="style" href="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/custom.css?v=1750241018" onload="this.onload=null;this.rel='stylesheet'" />
-		<link rel="preload" as="style" href="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/index.css?v=1750241018" onload="this.onload=null;this.rel='stylesheet'" />
-		<link rel="preload" as="style" href="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/header.css?v=1750241018" onload="this.onload=null;this.rel='stylesheet'" />
-		<link rel="preload" as="style" href="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/footer.css?v=1750241018" onload="this.onload=null;this.rel='stylesheet'" />
+		
+		<!-- Non-critical CSS deferred using media trick -->
+		<link rel="stylesheet" href="https://api.devaito.com/front/css/icons.css" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/icons.css" /></noscript>
+		
+		<link rel="stylesheet" href="https://api.devaito.com/front/css/magnific-popup.css" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/magnific-popup.css" /></noscript>
+		
+		<link rel="stylesheet" href="https://api.devaito.com/front/css/aos.css" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/aos.css" /></noscript>
+                
+                <link rel="stylesheet" href="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/custom.css?v=1750241018" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/custom.css?v=1750241018" /></noscript>
+		
+		<link rel="stylesheet" href="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/index.css?v=1750241018" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/index.css?v=1750241018" /></noscript>
+		
+		<link rel="stylesheet" href="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/header.css?v=1750241018" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/header.css?v=1750241018" /></noscript>
+		
+		<link rel="stylesheet" href="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/footer.css?v=1750241018" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/footer.css?v=1750241018" /></noscript>
+		
+		<!-- Font Awesome deferred -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'">
+		<noscript><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></noscript>
             </head>
             <body class=" "> 	
-
 		<div id="wrap">
 			<section id="section-intelligent-design" class="pt-75 pb-75">
 			<div class="container">
@@ -83,7 +102,8 @@ Devaito's AI learns from millions of high-converting designs to suggest optimiza
 			</div>
 			</div>
 			</div>
-			</section><section id="instant-deployment-section" class="light pt-100 pb-100">
+			</section>
+			<section id="instant-deployment-section" class="light pt-100 pb-100">
   			<div class="container">
     			<div class="row">
       			<div class="col-lg-6 col-md-6 col-sm-12">
@@ -175,7 +195,8 @@ Devaito's AI learns from millions of high-converting designs to suggest optimiza
       			</div>
     			</div>
   			</div>
-			</section><section id="section-ai-generation" class="pt-100 pb-100">
+			</section>
+            			<section id="section-ai-generation" class="pt-100 pb-100">
 			<div class="container">
 			<div class="row">
 			<div class="col-md-12 text-center section-header">
@@ -263,7 +284,8 @@ Watch our AI transform your vision into a complete website in real-time. From co
         			</div>
     			</div>
 			</div>
-  			</section><section id="section-connect-everything" class="pt-100 pb-100">
+  			</section>
+			<section id="section-connect-everything" class="pt-100 pb-100">
 			<div class="container-special-width">
 			<div class="connect-card">
 			<div class="row">
@@ -306,7 +328,8 @@ Seamlessly integrate with your favorite tools and platforms. Experience the futu
         			</div>
     			</div>
 			</div>
-  			</section><section id="innovators-testimonials" class="pt-100 pb-100">
+  			</section>
+            			<section id="innovators-testimonials" class="pt-100 pb-100">
   			<div class="container">
     			<!-- Header -->
     			<div class="row">
@@ -417,7 +440,8 @@ Seamlessly integrate with your favorite tools and platforms. Experience the futu
     			</div>
   			</div>
   			<div class="bg"></div>
-			</section><section id="pricing-journey" class="pt-75 pb-75">
+			</section>
+            			<section id="pricing-journey" class="pt-75 pb-75">
   			<div class="container">
     			<div class="row">
       			<div class="col-md-8 col-md-offset-2 text-center section-header">
@@ -554,7 +578,8 @@ Seamlessly integrate with your favorite tools and platforms. Experience the futu
     			</div>
   			</div>
   			<div class="bg"></div>
-			</section><section id="faq" class="light pt-75 pb-75">
+			</section>
+            			<section id="faq" class="light pt-75 pb-75">
   			<div class="container">
     			<div class="row">
       			<div class="col-md-8 col-md-offset-2 text-center section-header">
@@ -647,7 +672,8 @@ Seamlessly integrate with your favorite tools and platforms. Experience the futu
     			</div>
   			</div>
   			<div class="bg"></div>
-			</section><section id="cta-build" class="dark pt-100 pb-100">
+			</section>
+			<section id="cta-build" class="dark pt-100 pb-100">
   			<div class="container">
     			<div class="row">
       			<div class="col-md-10 col-md-offset-1 text-center">
@@ -666,7 +692,8 @@ Seamlessly integrate with your favorite tools and platforms. Experience the futu
     			</div>
   			</div>
   			<div class="bg"></div>
-			</section><section id="ai-updates-signup" class="dark pt-75 pb-75">
+			</section>
+            			<section id="ai-updates-signup" class="dark pt-75 pb-75">
   			<div class="container">
     			<div class="row">
       			<div class="col-md-8 col-md-offset-2 text-center">
@@ -693,8 +720,9 @@ Seamlessly integrate with your favorite tools and platforms. Experience the futu
 		<div class="modal-container"></div>
 		
 		
+		<!-- Optimized script loading with defer/async -->
 		<script defer src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
-		<script defer src="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/fonts.js?v=1750241018" ></script>
+		<script defer src="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/fonts.js?v=1750241018"></script>
 		<script defer src="/public/builder/assets/builder/js/jquery-2.1.4.min.js"></script>
 		<script defer src="/public/builder/assets/builder/js/bootstrap.min.js"></script>
 		<script defer src="/public/builder/assets/builder/js/jquery.vide.min.js"></script>
@@ -713,6 +741,5 @@ Seamlessly integrate with your favorite tools and platforms. Experience the futu
 		<script defer src="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/index.js?v=1750241018"></script>
 		<script defer src="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/header.js?v=1750241018"></script>
 		<script defer src="/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/footer.js?v=1750241018"></script>
-		<link rel="preload" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	</body>
 </html>
