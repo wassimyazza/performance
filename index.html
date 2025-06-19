@@ -23,8 +23,8 @@
 		<link rel="stylesheet" href="https://api.devaito.com/front/css/magnific-popup.css" media="print" onload="this.media='all'" />
 		<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/magnific-popup.css" /></noscript>
 		
-		<link rel="stylesheet" href="https://api.devaito.com/front/css/aos.css" media="print" onload="this.media='all'" />
-		<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/aos.css" /></noscript>
+		<!-- <link rel="stylesheet" href="https://api.devaito.com/front/css/aos.css" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/aos.css" /></noscript> -->
 		
                 <link rel="stylesheet" href="https://fixtamplatertl.devaito.com/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/custom.css?v=1750241018" media="print" onload="this.media='all'" />
 		<noscript><link rel="stylesheet" href="https://fixtamplatertl.devaito.com/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/custom.css?v=1750241018" /></noscript>
@@ -46,6 +46,26 @@
 		@font-face {
 			font-family: 'FontAwesome';
 			font-display: swap;
+		}
+		#devaito-hero .features .feature-item i {
+			display: inline-block; /* Allows width and height to be applied */
+			width: 24px;         /* Approximate width of an icon */
+			height: 24px;        /* Approximate height of an icon */
+			line-height: 24px;   /* Vertically center the icon once it loads */
+			text-align: center;
+			vertical-align: middle; /* Helps align with the text */
+		}
+
+		/* Reserve space for the hero section buttons to prevent them shifting */
+		#devaito-hero .cta-buttons .btn {
+			min-height: 48px; /* Give a minimum height to prevent resizing */
+		}
+
+		/* Reserve space for all Font Awesome icons across the site */
+		.fa {
+			display: inline-block;
+			width: 1.25em; /* Reserve space relative to the font size */
+			text-align: center;
 		}
 		</style>
             </head>
@@ -1962,7 +1982,7 @@ Seamlessly integrate with your favorite tools and platforms. Experience the futu
 		<script defer src="https://fixtamplatertl.devaito.com/public/builder/assets/builder/js/jquery.waypoints.min.js"></script>
 		<script defer src="https://fixtamplatertl.devaito.com/public/builder/assets/builder/js/countUp-jquery.js"></script>
 		<script defer src="https://fixtamplatertl.devaito.com/public/builder/assets/builder/js/jquery.countdown.js"></script>
-		<script defer src="https://fixtamplatertl.devaito.com/public/builder/assets/builder/js/aos.js"></script>
+		<!-- <script defer src="https://fixtamplatertl.devaito.com/public/builder/assets/builder/js/aos.js"></script> -->
 		<script defer src="https://api.devaito.com/utils/js-section-product.js"></script>
 		<script defer src="https://api.devaito.com/utils/section-js/translate-frontend.js"></script>
 		<script defer src="https://fixtamplatertl.devaito.com/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/js/custom-js/custom.js?v=1750241018"></script>
