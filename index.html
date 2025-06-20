@@ -1,96 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+	<head>
 	<!-- Preconnects -->
 	<link rel="preconnect" href="https://api.devaito.com" crossorigin>
-	<link rel="preconnect" href="https://fixtamplatertl.devaito.com" crossorigin>
-	<link rel="preconnect" href="https://maxcdn.bootstrapcdn.com" crossorigin>
 	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 	<link rel="preconnect" href="https://images.pexels.com" crossorigin>
 
 	<meta charset="UTF-8">
 	<title>Your One-Stop Shop for the Best Deals!</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<!-- Preload & apply styles on load -->
-	<link rel="preload" href="https://api.devaito.com/front/css/bootstrap.css" as="style"
-		onload="this.onload=null;this.rel='stylesheet'">
-	<noscript>
-		<link rel="stylesheet" href="https://api.devaito.com/front/css/bootstrap.css">
-	</noscript>
+	<!-- Critical CSS (Preloaded) -->
+	<link rel="preload" href="https://api.devaito.com/front/css/bootstrap.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/bootstrap.css"></noscript>
 
-	<link rel="preload" href="https://api.devaito.com/front/css/style.css" as="style"
-		onload="this.onload=null;this.rel='stylesheet'">
-	<noscript>
-		<link rel="stylesheet" href="https://api.devaito.com/front/css/style.css">
-	</noscript>
+	<link rel="preload" href="https://api.devaito.com/front/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/style.css"></noscript>
 
-	<!-- Non-critical CSS (lazy loaded) -->
+	<!-- Optional: Lazy-loaded supporting styles -->
 	<link rel="stylesheet" href="https://api.devaito.com/front/css/icons.css" media="print" onload="this.media='all'">
-	<noscript>
-		<link rel="stylesheet" href="https://api.devaito.com/front/css/icons.css">
-	</noscript>
+	<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/icons.css"></noscript>
 
-	<link rel="stylesheet" href="https://api.devaito.com/front/css/magnific-popup.css" media="print"
-		onload="this.media='all'">
-	<noscript>
-		<link rel="stylesheet" href="https://api.devaito.com/front/css/magnific-popup.css">
-	</noscript>
+	<link rel="stylesheet" href="https://api.devaito.com/front/css/magnific-popup.css" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/magnific-popup.css"></noscript>
 
 	<link rel="stylesheet" href="https://api.devaito.com/front/css/aos.css" media="print" onload="this.media='all'">
-	<noscript>
-		<link rel="stylesheet" href="https://api.devaito.com/front/css/aos.css">
-	</noscript>
+	<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/aos.css"></noscript>
 
-	<!-- Custom Styles Preloaded -->
-	<link rel="preload"
-		href="https://fixtamplatertl.devaito.com/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/custom.css?v=1750241018"
-		as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript>
-		<link rel="stylesheet"
-			href="https://fixtamplatertl.devaito.com/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/custom.css?v=1750241018">
-	</noscript>
-
-	<link rel="preload"
-		href="https://fixtamplatertl.devaito.com/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/index.css?v=1750241018"
-		as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript>
-		<link rel="stylesheet"
-			href="https://fixtamplatertl.devaito.com/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/index.css?v=1750241018">
-	</noscript>
-
-	<link rel="preload"
-		href="https://fixtamplatertl.devaito.com/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/header.css?v=1750241018"
-		as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript>
-		<link rel="stylesheet"
-			href="https://fixtamplatertl.devaito.com/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/header.css?v=1750241018">
-	</noscript>
-
-	<link rel="preload"
-		href="https://fixtamplatertl.devaito.com/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/footer.css?v=1750241018"
-		as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript>
-		<link rel="stylesheet"
-			href="https://fixtamplatertl.devaito.com/public/builder/templates_json_website/front/fixtamplatertl_devaito_com/css/custom-css/footer.css?v=1750241018">
-	</noscript>
-
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-		media="print" onload="this.media='all'">
-	<noscript>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	</noscript>
-
-	<!-- Font display strategy -->
 	<style>
 		@font-face {
-			font-family: 'FontAwesome';
-			font-display: swap;
+		font-family: 'FontAwesome';
+		font-display: swap;
 		}
 	</style>
-</head>
+	</head>
+
 
 <body class=" ">
 
