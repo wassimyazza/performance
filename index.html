@@ -2,22 +2,28 @@
 <html lang="en">
 
 	<head>
-	<!-- Minimal preconnect -->
+	<!-- Preconnect -->
 	<link rel="preconnect" href="https://api.devaito.com" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
 	<meta charset="UTF-8">
 	<title>Your One-Stop Shop for the Best Deals!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<!-- Only core CSS preloaded -->
+	<!-- Critical CSS -->
 	<link rel="preload" href="https://api.devaito.com/front/css/bootstrap.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/bootstrap.css"></noscript>
 
 	<link rel="preload" href="https://api.devaito.com/front/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://api.devaito.com/front/css/style.css"></noscript>
 
+	<!-- Font Awesome (reintroduced) -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	</noscript>
 
-	<!-- Font fallback to avoid font blocking -->
+	<!-- Font swap hint -->
 	<style>
 		@font-face {
 		font-family: 'FontAwesome';
